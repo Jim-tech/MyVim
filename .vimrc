@@ -10,7 +10,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-" Plug 'jiangmiao/auto-pairs'
 Plug 'whatot/gtags-cscope.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'godlygeek/tabular'
@@ -20,6 +19,7 @@ Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-repeat'
 Plug 'Raimondi/delimitMate'
 Plug 'vim-syntastic/syntastic'
+Plug 'rhysd/vim-clang-format'
 
 
 " Initialize plugin system
@@ -78,7 +78,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
-let g:Powerline_symbols = 'fancy'
+" let g:Powerline_symbols = 'fancy'
 
 " leaderf config
 nmap <silent> <leader>fi :LeaderfFile<CR>
@@ -106,12 +106,13 @@ let g:NERDToggleCheckAllLines = 1
 nmap <leader>a :Tabularize /
 
 " syntastic config
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" clang-format config
+nmap <silent> <leader>cf :ClangFormat<cr>
