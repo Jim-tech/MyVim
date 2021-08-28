@@ -3,7 +3,7 @@
 
 typedef struct {
   unsigned char a;
-  char string[32];
+  char		string[32];
   unsigned char b;
 } ArrayNode;
 
@@ -18,16 +18,16 @@ short int a = 1;
 short int b = 10;
 short int c = 20;
 
-int a = 1;
-unsigned int = 2;
+int a		  = 1;
+unsigned int	  = 2;
 unsigned char n[] = "func you";
 
 d = {
-    'apple'    : 1 , # apple
-    'banana'   : 2 , # banana
-    'cake'     : 3 , # cake
-    'daisy'    : 4 , # daisy
-    'eggplant' : 5 , # eggplant
+           ' apple    ' : 1 , # apple
+           ' banana   ' : 2 , # banana
+   				 ' cake     ' : 3 , # cake
+           ' daisy    ' : 4 , # daisy
+           ' eggplant ' : 5 , # eggplant
 }
 
 

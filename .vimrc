@@ -19,7 +19,11 @@ Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-repeat'
 Plug 'Raimondi/delimitMate'
 Plug 'vim-syntastic/syntastic'
+
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'kana/vim-operator-user'
 Plug 'rhysd/vim-clang-format'
+
 
 
 " Initialize plugin system
@@ -36,6 +40,9 @@ autocmd FileType python set number
 autocmd FileType python set smartindent
 set autoread
 set mouse=a
+
+" workaround backspace not work
+set backspace=2
 
 set number
 colorscheme desert
@@ -78,7 +85,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
-" let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'fancy'
 
 " leaderf config
 nmap <silent> <leader>fi :LeaderfFile<CR>
@@ -109,10 +116,23 @@ nmap <leader>a :Tabularize /
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 " clang-format config
 nmap <silent> <leader>cf :ClangFormat<cr>
+let g:clang_format#code_style = "google"
+let g:clang_format#style_options = {
+			\ 'Language'                     : 'Cpp',
+			\ 'BasedOnStyle'                 : 'Google',
+			\ 'AlignConsecutiveMacros'       : 'true',
+			\ 'AlignConsecutiveAssignments'  : 'true',
+			\ 'AlignConsecutiveBitFields'    : 'true',
+			\ 'AlignConsecutiveDeclarations' : 'true',
+			\ 'AlignTrailingComments'        : 'true',
+			\ 'BreakBeforeBraces'        		 : 'Linux',
+			\ }
+
+
