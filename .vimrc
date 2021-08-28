@@ -11,7 +11,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-Plug 'whatot/gtags-cscope.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'godlygeek/tabular'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
@@ -64,7 +63,7 @@ set nowrap
 
 
 " 解决中文乱码
-set guifont=Sauce\ Code\ Powerline:h12
+set guifont="Sauce Code Powerline:h12"
 set encoding=utf-8
 set termencoding=utf-8
 
@@ -92,13 +91,18 @@ let g:Powerline_symbols = 'fancy'
 " leaderf config
 nmap <silent> <leader>fi :LeaderfFile<CR>
 nmap <silent> <leader>ft :LeaderfTag<CR>
-
-" gtags config
-set cscopetag
-set cscopeprg='gtags-cscope'
-let GtagsCscope_Auto_Load = 1
-let CtagsCscope_Auto_Map = 1
-let GtagsCscope_Quiet = 1
+nmap <silent> <leader>ff :LeaderfFunction<CR>
+let g:Lf_Gtagslabel = 'native'
+let g:Lf_Gtagsconf = expand('~/gtags.conf')
+let g:Lf_PreviewInPopup = 1
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PopupPosition = [0xFFFFFFFF, 0]
+let g:Lf_PopupColorscheme = 'default'
+let g:Lf_RootMarkers = ['.root']
+let g:Lf_GtagsAutoGenerate = 1
+let g:Lf_GtagsAutoUpdate = 1
+let g:Lf_GtagsSkipUnreadable = 1
+let g:Lf_GtagsStoreInRootMarker = 1
 
 " nerdcommenter config -- use the default config
 let g:NERDCreateDefaultMappings = 1
