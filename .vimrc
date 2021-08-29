@@ -89,9 +89,10 @@ let g:airline_powerline_fonts = 1
 let g:Powerline_symbols = 'fancy'
 
 " leaderf config
-nmap <silent> <leader>fi :LeaderfFile<CR>
-nmap <silent> <leader>ft :LeaderfTag<CR>
-nmap <silent> <leader>ff :LeaderfFunction<CR>
+nmap <silent> <leader>fi :Leaderf File<CR>
+nmap <silent> <leader>ft :Leaderf gtags<CR>
+nmap <silent> <leader>ff :Leaderf Function<CR>
+nmap <silent> <leader>tg :Leaderf gtags --update<CR>
 let g:Lf_Gtagslabel = 'native'
 let g:Lf_Gtagsconf = expand('~/.globalrc')
 let g:Lf_PreviewInPopup = 1
