@@ -93,7 +93,7 @@ nmap <silent> <leader>fi :LeaderfFile<CR>
 nmap <silent> <leader>ft :LeaderfTag<CR>
 nmap <silent> <leader>ff :LeaderfFunction<CR>
 let g:Lf_Gtagslabel = 'native'
-let g:Lf_Gtagsconf = expand('~/gtags.conf')
+let g:Lf_Gtagsconf = expand('~/.globalrc')
 let g:Lf_PreviewInPopup = 1
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PopupPosition = [0xFFFFFFFF, 0]
@@ -103,6 +103,9 @@ let g:Lf_GtagsAutoGenerate = 1
 let g:Lf_GtagsAutoUpdate = 1
 let g:Lf_GtagsSkipUnreadable = 1
 let g:Lf_GtagsStoreInRootMarker = 1
+let g:Lf_AutoResize = 1
+let g:Lf_MaxCount = 10000000
+let g:Lf_PreviewResult = { 'gtags': 1 }
 
 " nerdcommenter config -- use the default config
 let g:NERDCreateDefaultMappings = 1
