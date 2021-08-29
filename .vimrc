@@ -88,10 +88,14 @@ let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_powerline_fonts = 1
 let g:Powerline_symbols = 'fancy'
 
+" switch buffer
+nnoremap [b :bp<CR>
+nnoremap ]b :bn<CR>
+
 " leaderf config
-nmap <silent> <leader>fi :Leaderf File<CR>
+nmap <silent> <leader>fi :Leaderf file<CR>
 nmap <silent> <leader>ft :Leaderf gtags<CR>
-nmap <silent> <leader>ff :Leaderf Function<CR>
+nmap <silent> <leader>ff :Leaderf function<CR>
 nmap <silent> <leader>tg :Leaderf gtags --update<CR>
 let g:Lf_Gtagslabel = 'native'
 let g:Lf_Gtagsconf = expand('~/.globalrc')
@@ -107,6 +111,11 @@ let g:Lf_GtagsStoreInRootMarker = 1
 let g:Lf_AutoResize = 1
 let g:Lf_MaxCount = 10000000
 let g:Lf_PreviewResult = { 'gtags': 1 }
+nmap <leader>csd :Leaderf gtags -d <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>csr :Leaderf gtags -r <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>css :Leaderf gtags -s <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>csg :Leaderf gtags -g <C-R>=expand("<cword>")<CR><CR>
+
 
 " nerdcommenter config -- use the default config
 let g:NERDCreateDefaultMappings = 1
