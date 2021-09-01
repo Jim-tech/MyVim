@@ -24,6 +24,11 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'kana/vim-operator-user'
 Plug 'rhysd/vim-clang-format'
 
+" Markdown
+Plug 'reedes/vim-pencil'
+Plug 'plasticboy/vim-markdown'
+Plug 'junegunn/limelight.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
 
 
 " Initialize plugin system
@@ -154,4 +159,12 @@ let g:clang_format#style_options = {
 			\ 'BreakBeforeBraces'        		 : 'Linux',
 			\ }
 
+" Limelight
+let g:limelight_conceal_ctermfg=244
 
+" Markdown Preview
+let g:mkdp_auto_close=0
+let g:mkdp_refresh_slow=1
+let g:mkdp_markdown_css='~/.github-markdown.css'
+nmap <silent> <leader>mdp :MarkdownPreview<CR>
+nmap <silent> <leader>mdps :MarkdownPreviewStop<CR>
