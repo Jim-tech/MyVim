@@ -29,6 +29,7 @@ Plug 'reedes/vim-pencil'
 Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/limelight.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
+Plug 'mracos/mermaid.vim'
 
 
 " Initialize plugin system
