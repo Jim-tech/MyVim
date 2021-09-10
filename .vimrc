@@ -32,6 +32,8 @@ Plug 'junegunn/limelight.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'mracos/mermaid.vim'
 
+Plug 'jiangmiao/auto-pairs'
+
 
 " Initialize plugin system
 call plug#end()
@@ -47,6 +49,8 @@ autocmd FileType python set number
 autocmd FileType python set smartindent
 set autoread
 set mouse=a
+
+set nofoldenable
 
 " workaround backspace not work
 set backspace=2
@@ -170,3 +174,10 @@ let g:mkdp_refresh_slow=1
 let g:mkdp_markdown_css='~/.github-markdown.css'
 nmap <silent> <leader>mdp :MarkdownPreview<CR>
 nmap <silent> <leader>mdps :MarkdownPreviewStop<CR>
+
+" insert date and time as my blog needs
+nmap <silent> <leader>mtime "=strftime("%Y-%m-%d %H:%M:%S %z")<CR>P
+
+" buffer switch
+nmap <silent> <leader>bp :bp<CR>
+nmap <silent> <leader>bn :bn<CR>
