@@ -28,7 +28,8 @@ Plug 'rhysd/vim-clang-format'
 Plug 'reedes/vim-pencil'
 Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/limelight.vim'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
+" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'mracos/mermaid.vim'
 
 
@@ -104,10 +105,10 @@ nmap <silent> <leader>ft :Leaderf gtags<CR>
 nmap <silent> <leader>ff :Leaderf function<CR>
 nmap <silent> <leader>tg :Leaderf gtags --update<CR>
 let g:Lf_Gtagslabel = 'native'
-let g:Lf_Gtagsconf = expand('~/.globalrc')
+let g:Lf_Gtagsconf = expand('.globalrc')
 let g:Lf_PreviewInPopup = 1
 let g:Lf_WindowPosition = 'popup'
-let g:Lf_PopupPosition = [0xFFFFFFFF, 0]
+let g:Lf_PopupPosition = [65535, 0]
 let g:Lf_PopupColorscheme = 'default'
 let g:Lf_RootMarkers = ['.root']
 let g:Lf_GtagsAutoGenerate = 1
