@@ -34,6 +34,7 @@ Plug 'mracos/mermaid.vim'
 
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 " Initialize plugin system
 call plug#end()
